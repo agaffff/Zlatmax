@@ -524,22 +524,30 @@
         display: flex;
         color: #fff;
         text-decoration: none;
-        font-family: $fontFamily;
-        font-weight: 700;
+        //font-family: $fontFamily;
+        //font-weight: 700;
         //font-style: normal;
-        font-size: rem(16);
-        line-height: 20px;
+        //font-size: rem(16);
+        //line-height: 20px;
         position: relative;
-        transition: color 0.3s ease 0s;
+       // transition: color 0.3s ease 0s;
         &[data-parent]{
                &::before{
                 @extend %ic;
                 @extend ._icon-arrow;
-                @media(min-width:$tablet){
-                  display: none;
+                display: none;
+                @media(max-width:$tablet){
+                  display: block;
+                  font-size: rem(10);
+                  transform: rotate(-90deg);
                 }
-                
-               } 
+            } 
+               @media(max-width:$tablet){
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+            }
         }
         @media(min-width: $tablet){
             justify-content: center;
@@ -571,13 +579,16 @@
                 }
             }
         }
-        &._sub-menu-active{
-            color: $mainOrangeColor;
-            &::after {
-                opacity: 1;
-                visibility: visible;
-            } 
+        @media (min-width: $tablet){
+            &._sub-menu-active{
+                color: $mainOrangeColor;
+                &::after {
+                    opacity: 1;
+                    visibility: visible;
+                } 
+            }
         }
+       
         @media(max-width: $tablet){
             @include adaptiveValue("font-size", 30, 20, 992, 320, 1);
             
