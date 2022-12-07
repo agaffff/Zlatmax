@@ -1,3 +1,126 @@
 //====================================================================================================
+.main-block {
+    background: url("@img/mainpage/main-block/751 1.png") center / cover no-repeat  ;
+    
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-bottom", 60, 20);
+    &__container {
+    }
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr percent(635,1600);
+    }
+    &__slider {
+    }
+    &__swiper {
+    }
+    &__slide {
+    }
+    &__media {
+    }
+    &__advantages {
+    }
+}
+
+.slide-main-block {
+    &:not(:last-child){
+        @include adaptiveValue("margin-bottom", 60, 30);
+    }
+    &__content {
+        padding: 0 rem(40) 0 0;
+        
+            
+    }
+    &__title {
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        font-size: rem(36);
+        line-height: math.div(46,36);
+        &:not(:last-child){
+            margin-bottom: em(15,36)}
+    }
+    &__sub-title {
+        color: #fff;
+        font-size: rem(36);
+        line-height: math.div(46,36);
+        &:not(:last-child){
+            margin-bottom: em(30,36)}
+    }
+    &__text {
+        color: rgba(255,255,255,0.7);
+        font-size: rem(20);
+        line-height: math.div(30,20);
+    }
+    &__button {
+       
+        background-color: $mainOrangeColor;
+        color: #fff;
+    }
+
+}
+
+.button {
+}
+.main-block__media {
+   
+}
+.media-main-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem(15);
+
+    &__body{
+        position: relative;
+    }
+    &__image {
+        
+        &::before{
+            content: '';
+            width: 423px;
+            height: 423px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            position: absolute;
+            bottom: 1%;
+            right: 0;
+            transform: translate(percent(131, 423), 0px);
+        }
+        img{
+            position: relative;
+            z-index: 2;
+        }
+    }
+    &__tips {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: rgb(215, 14, 24);
+    }
+    &__tip {
+        &_1 {
+        }
+        &_2 {
+        }
+        &_3 {
+        }
+    }
+}
+
+.main-block__advantages {
+}
+.advantages-main {
+    &__item {
+    }
+    &__icon {
+    }
+    &__text {
+    }
+
+}
+
 
 //====================================================================================================

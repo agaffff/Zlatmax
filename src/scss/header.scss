@@ -211,9 +211,7 @@
     border-radius: rem(3);
     position: relative;
     border: 1px solid rgba(4,4,4,0.5);
-    // @media(max-width: $tablet){
-    //     max-width: rem(377);
-    //     }
+    
     // .search-header__button
 
     &__button {
@@ -298,7 +296,7 @@
     // .actions-header__cart
 
     &__cart {
-        color: #000;
+        color: rgb(0, 0, 0);
         text-decoration: none;
     }
 }
@@ -411,10 +409,12 @@
     // .cart-header__icon
 
     &__icon {
-        color: rgb(201, 43, 43);
+        color:  rgb(190, 190, 190);
         flex: 0 0 37px;
         position: relative;
         z-index: 5;
+        font-size: rem(40);
+        
         span {
             position: absolute;
             width: rem(14);
@@ -767,7 +767,10 @@
     
     // .sub-menu-catalog__link-category
     &__link-category{
-        @include adaptiveValue("font-size", 30, 20, 992, 320);
+        @media(max-width: $tablet){
+            @include adaptiveValue("font-size", 30, 20, 992, 320);
+        }
+        
     }
     
     // .sub-menu-catalog__footer
